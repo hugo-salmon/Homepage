@@ -8,8 +8,15 @@
 
 /* NAVBAR */
 header {
-  background-color: #1f2937; /* gris foncé */
-  padding: 15px 0;
+  background-color: #00163d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .navbar {
@@ -38,6 +45,8 @@ header {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 .nav-links li a:hover {
