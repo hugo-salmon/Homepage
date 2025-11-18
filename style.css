@@ -179,8 +179,18 @@ h2 {
 
 /* FOOTER */
 footer {
-  background-color: #1f2937;
+  background-color: #00163d;
   color: #f9fafb;
   text-align: center;
   padding: 20px 0;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: inherit;      /* le lien prend la couleur du parent */
+  text-decoration: none; /* enlève le soulignement */
+}
+
+a:hover {
+  opacity: 0.8;        /* petit effet hover propre */
 }
