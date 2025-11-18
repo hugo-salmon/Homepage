@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page d'accueil Moderne</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -23,9 +24,33 @@
   <!-- HERO -->
   <section id="home" class="hero">
     <div class="hero-content">
+      <!-- Titre principal -->
       <h1>Bienvenue sur MonSite</h1>
-      <p>Une page d'accueil simple, moderne et élégante.</p>
-      <a href="#features" class="btn">Découvrir</a>
+  
+      <!-- Sous-titre dynamique / mots clés -->
+      <p class="animated-text">Rapide. Moderne. Responsive.</p>
+  
+      <!-- Boutons CTA -->
+      <div class="hero-buttons">
+        <a href="#features" class="btn btn-primary">Découvrir</a>
+        <a href="#about" class="btn btn-secondary">En savoir plus</a>
+      </div>
+  
+      <!-- Mini-features / points clés -->
+      <div class="hero-features">
+        <div class="feature">
+          <span class="icon">⚡</span>
+          <p>Rapide</p>
+        </div>
+        <div class="feature">
+          <span class="icon">🎨</span>
+          <p>Design moderne</p>
+        </div>
+        <div class="feature">
+          <span class="icon">📱</span>
+          <p>Responsive</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -33,15 +58,18 @@
   <section id="features" class="section-light">
     <h2>Nos Fonctionnalités</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" data-delay="0">
+        <div class="icon">⚡</div>
         <h3>Rapide</h3>
-        <p>Une expérience fluide et rapide pour les utilisateurs.</p>
+        <p>Une expérience fluide et réactive pour les utilisateurs.</p>
       </div>
-      <div class="card">
+      <div class="card" data-delay="150">
+        <div class="icon">🎨</div>
         <h3>Design Moderne</h3>
         <p>Un style élégant et minimaliste qui attire l’œil.</p>
       </div>
-      <div class="card">
+      <div class="card" data-delay="300">
+        <div class="icon">📱</div>
         <h3>Responsive</h3>
         <p>Accessible sur tous les appareils, du mobile au desktop.</p>
       </div>
