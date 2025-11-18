@@ -6,6 +6,7 @@
   <title>Page d'accueil Moderne</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
@@ -22,60 +23,91 @@
   </header>
 
   <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <!-- Titre principal -->
-      <h1>Bienvenue sur MonSite</h1>
-  
-      <!-- Sous-titre dynamique / mots clés -->
-      <p class="animated-text">Rapide. Moderne. Responsive.</p>
-  
-      <!-- Boutons CTA -->
-      <div class="hero-buttons">
-        <a href="#features" class="btn btn-primary">Découvrir</a>
-        <a href="#about" class="btn btn-secondary">En savoir plus</a>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Bienvenue sur MonSite</h1>
+
+    <!-- Sous-titre dynamique avec effet typewriter -->
+    <p class="animated-text">Rapide. Moderne. Innovant.</p>
+
+    <!-- CTA Buttons -->
+    <div class="hero-buttons">
+      <a href="#features" class="btn btn-primary">Découvrir</a>
+      <a href="#about" class="btn btn-secondary">En savoir plus</a>
+    </div>
+
+    <!-- Mini-features stylées en hero -->
+    <div class="hero-features">
+      <div class="feature">
+        <span class="icon">⚡</span>
+        <p>Performance</p>
       </div>
-  
-      <!-- Mini-features / points clés -->
-      <div class="hero-features">
-        <div class="feature">
-          <span class="icon">⚡</span>
-          <p>Rapide</p>
-        </div>
-        <div class="feature">
-          <span class="icon">🎨</span>
-          <p>Design moderne</p>
-        </div>
-        <div class="feature">
-          <span class="icon">📱</span>
-          <p>Responsive</p>
-        </div>
+      <div class="feature">
+        <span class="icon">🎨</span>
+        <p>Design épuré</p>
+      </div>
+      <div class="feature">
+        <span class="icon">📱</span>
+        <p>Responsive</p>
+      </div>
+      <div class="feature">
+        <span class="icon">🔒</span>
+        <p>Sécurité</p>
       </div>
     </div>
-  </section>
 
-  <!-- FEATURES -->
-  <section id="features" class="section-light">
-    <h2>Nos Fonctionnalités</h2>
-    <div class="cards">
+    <!-- Illustration animée -->
+    <div class="hero-illustration">
+      <lottie-player 
+          src="animation.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+          class="lottie-anim">
+      </lottie-player>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section-light">
+  <h2>Nos Fonctionnalités</h2>
+  
+  <div class="cards-container">
+    <!-- Ligne 1 : 3 cartes -->
+    <div class="cards-row">
       <div class="card" data-delay="0">
         <div class="icon">⚡</div>
-        <h3>Rapide</h3>
-        <p>Une expérience fluide et réactive pour les utilisateurs.</p>
+        <h3>Performance</h3>
+        <p>Chargement ultra-rapide pour une expérience utilisateur optimale.</p>
       </div>
       <div class="card" data-delay="150">
         <div class="icon">🎨</div>
-        <h3>Design Moderne</h3>
-        <p>Un style élégant et minimaliste qui attire l’œil.</p>
+        <h3>Design moderne</h3>
+        <p>Style élégant et animations subtiles pour un rendu pro.</p>
       </div>
       <div class="card" data-delay="300">
         <div class="icon">📱</div>
         <h3>Responsive</h3>
-        <p>Accessible sur tous les appareils, du mobile au desktop.</p>
+        <p>Adaptation parfaite sur tous les appareils, mobile & desktop.</p>
       </div>
     </div>
-  </section>
 
+    <!-- Ligne 2 : 2 cartes centrées -->
+    <div class="cards-row row-bottom">
+      <div class="card" data-delay="450">
+        <div class="icon">🔒</div>
+        <h3>Sécurité</h3>
+        <p>Protection des données et respect de la vie privée.</p>
+      </div>
+      <div class="card" data-delay="600">
+        <div class="icon">⚙️</div>
+        <h3>Customisation</h3>
+        <p>Options flexibles pour personnaliser le site facilement.</p>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- ABOUT -->
   <section id="about" class="section-dark">
     <h2>À propos</h2>

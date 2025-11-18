@@ -8,7 +8,7 @@
 
 /* NAVBAR */
 header {
-  background-color: #1f2937; /* gris foncé */
+  background-color: #1f2937;
   padding: 15px 0;
 }
 
@@ -41,7 +41,7 @@ header {
 }
 
 .nav-links li a:hover {
-  color: #3b82f6; /* bleu vif */
+  color: #3b82f6;
 }
 
 /* HERO */
@@ -55,27 +55,26 @@ header {
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
-/* Titre principal */
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-/* Sous-titre animé */
 .animated-text {
   font-size: 1.5rem;
   margin-bottom: 30px;
   font-weight: 500;
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
-/* Effet typewriter simple */
 .animated-text::after {
   content: '|';
   margin-left: 5px;
@@ -87,7 +86,7 @@ header {
   25%, 75% { opacity: 0; }
 }
 
-/* Boutons */
+/* CTA Buttons */
 .hero-buttons {
   margin-bottom: 50px;
   display: flex;
@@ -96,39 +95,42 @@ header {
 }
 
 .btn {
-  padding: 12px 30px;
-  border-radius: 8px;
+  padding: 14px 35px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background-color: #f59e0b; /* orange vif */
+  background-color: #f59e0b;
   color: white;
+  box-shadow: 0 5px 15px rgba(245,158,11,0.4);
 }
 
 .btn-primary:hover {
-  background-color: #d97706;
-  transform: scale(1.05);
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245,158,11,0.6);
 }
 
 .btn-secondary {
-  background-color: #ffffff88; /* blanc transparent */
-  color: #1f2937; /* texte sombre */
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid #ffffff88;
 }
 
 .btn-secondary:hover {
-  background-color: #ffffff;
-  transform: scale(1.05);
+  background-color: rgba(255,255,255,0.35);
+  transform: scale(1.08) translateY(-2px);
 }
 
-/* Mini-features */
+/* Hero mini-features */
 .hero-features {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .feature {
@@ -142,82 +144,87 @@ header {
 }
 
 .feature:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.05);
   color: #ffffff;
 }
 
 .feature .icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
-/* Optionnel : image illustration dans hero */
-.hero-img {
-  max-width: 400px;
-  margin-top: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* Hero illustration */
+.hero-illustration {
+  display: flex;
+  justify-content: center;   /* centre horizontal */
+  align-items: center;        /* centre vertical */
+  margin-top: 50px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-  .animated-text {
-    font-size: 1.2rem;
-  }
-  .hero-features {
-    flex-direction: column;
-    gap: 20px;
-  }
+.lottie-anim {
+  width: 450px;
+  height: 450px;
 }
 
-/* SECTION FEATURES */
+/* FEATURES */
 .section-light {
   background-color: #f3f4f6;
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
 
 .section-light h2 {
-  margin-bottom: 50px;
-  font-size: 2.2rem;
+  margin-bottom: 60px;
+  font-size: 2.5rem;
   color: #1f2937;
+  position: relative;
 }
 
-/* CARDS CONTAINER */
-.cards {
+.section-light h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3b82f6;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Cards container pyramide */
+.cards-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 30px;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-/* CARD */
+.cards-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.row-bottom {
+  justify-content: center;
+}
+
+/* Card style */
 .card {
   background-color: white;
   border-radius: 15px;
-  padding: 30px 20px;
+  padding: 30px 25px;
   width: 280px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition: transform 0.5s, box-shadow 0.5s;
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(40px);
 }
 
 .card .icon {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #3b82f6; /* bleu moderne */
+  color: #3b82f6;
 }
 
-/* Hover effect */
-.card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-/* CARD H3 & P */
 .card h3 {
   margin-bottom: 15px;
   font-size: 1.5rem;
@@ -227,14 +234,31 @@ header {
 .card p {
   color: #4b5563;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+/* Card hover */
+.card:hover {
+  transform: translateY(-10px) scale(1.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .cards {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .animated-text {
+    font-size: 1.2rem;
+  }
+  .hero-features {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .cards-row, .row-bottom {
     flex-direction: column;
     align-items: center;
+    margin-left: 0;
   }
 }
 
@@ -244,4 +268,11 @@ footer {
   color: #f9fafb;
   text-align: center;
   padding: 20px 0;
+}
+
+/* ANIMATION CARDS */
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
