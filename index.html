@@ -3,49 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page d'accueil</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Page d'accueil Moderne</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- NAVBAR -->
   <header>
-    <h1>Mon Site</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Contact</a></li>
+    <nav class="navbar">
+      <div class="logo">MonSite</div>
+      <ul class="nav-links">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#features">Fonctionnalités</a></li>
+        <li><a href="#about">À propos</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section id="hero">
-    <h2>Bienvenue sur mon site !</h2>
-    <p>Une page d'accueil simple et rapide à créer.</p>
-    <a href="#" class="btn">En savoir plus</a>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Bienvenue sur MonSite</h1>
+      <p>Une page d'accueil simple, moderne et élégante.</p>
+      <a href="#features" class="btn">Découvrir</a>
+    </div>
   </section>
 
-  <!-- CONTENT -->
-  <section id="content">
-    <article>
-      <h3>Section 1</h3>
-      <p>Un texte descriptif pour la première section.</p>
-    </article>
-    <article>
-      <h3>Section 2</h3>
-      <p>Un texte descriptif pour la deuxième section.</p>
-    </article>
-    <article>
-      <h3>Section 3</h3>
-      <p>Un texte descriptif pour la troisième section.</p>
-    </article>
+  <!-- FEATURES -->
+  <section id="features" class="section-light">
+    <h2>Nos Fonctionnalités</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Rapide</h3>
+        <p>Une expérience fluide et rapide pour les utilisateurs.</p>
+      </div>
+      <div class="card">
+        <h3>Design Moderne</h3>
+        <p>Un style élégant et minimaliste qui attire l’œil.</p>
+      </div>
+      <div class="card">
+        <h3>Responsive</h3>
+        <p>Accessible sur tous les appareils, du mobile au desktop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-dark">
+    <h2>À propos</h2>
+    <p>Nous créons des pages web modernes, sobres et stylées, faciles à personnaliser.</p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Mon Site. Tous droits réservés.</p>
+    <p>© 2025 MonSite. Tous droits réservés.</p>
   </footer>
 
 </body>
